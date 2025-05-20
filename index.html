@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cerdito Motivador</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #fce4ec;
+    }
+    #cerdito {
+      display: none;
+      width: 200px;
+      margin: 20px auto;
+    }
+    #mensaje {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #444;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f06292;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Haz clic para motivarte 🐷</h1>
+  <button onclick="mostrarMensaje()">Motívame</button>
+  <div>
+    <img id="cerdito" src="cerdito.png" alt="Cerdito motivador" />
+    <p id="mensaje"></p>
+  </div>
+
+  <script>
+    const mensajes = [
+      // Español
+      "Yamne, recuerda que cada paso que das te acerca a tus sueños más grandes; sigue firme y con pasión.",
+      "Yabne, tu esfuerzo constante es el motor que impulsa tu crecimiento; no te detengas, el éxito te espera.",
+      "Yabno, en los momentos difíciles es cuando más creces; confía en tu fortaleza interior y avanza con valentía.",
+      "Yabnecita, eres una luz que ilumina tu camino y el de los demás; no dejes que nada apague tu brillo.",
+      "Yabnecito, cada día es una nueva página en la historia de tu vida; escríbela con coraje y amor propio.",
+      "Yamne, aunque el camino sea largo, tu determinación es más fuerte que cualquier obstáculo.",
+      "Yabne, la paciencia y la constancia que muestras hoy serán la base de tu gran éxito mañana.",
+      "Yabne, la fuerza que necesitas para vencer está en tu interior; confía en ti y en tu capacidad única.",
+      "Yabnecita, el esfuerzo que haces hoy es el regalo que tu futuro te agradecerá profundamente.",
+      "Yabnecito, nunca subestimes el poder de tu perseverancia; estás construyendo un legado que inspira.",
+      // Inglés
+      "Yamne, every challenge you face is shaping you into the extraordinary person you are meant to be. Keep pushing forward.",
+      "Yabne, your dedication and hard work today are the seeds for the incredible future you are building. Believe in yourself.",
+      "Yabne, strength is not about never falling, but about rising every time with more courage and wisdom. You’ve got this.",
+      "Yabnecita, your kindness and resilience light up the lives around you. Never forget the power you carry within.",
+      "Yabnecito, each morning is a fresh start to rewrite your story — write it boldly and with purpose.",
+      "Yamne, growth comes from embracing discomfort and learning from it; your journey is proof of your bravery.",
+      "Yabne, you possess an inner fire that no obstacle can extinguish. Keep that flame alive and shining bright.",
+      "Yabnecito, progress might be slow at times, but every step forward is a victory worth celebrating.",
+      "Yabnecita, your commitment to bettering yourself inspires those who look up to you more than you realize.",
+      "Yabnecito, believe in the power of your dreams and the strength of your will — they will guide you through.",
+      // Francés
+      "Yamne, chaque défi que tu relèves te façonne en une personne exceptionnelle. Continue d’avancer avec confiance.",
+      "Yabne, ta détermination aujourd’hui est la fondation solide de ton succès futur. Crois en toi sans hésiter.",
+      "Yabno, la vraie force réside dans ta capacité à te relever plus fort à chaque chute. Tu es capable de grandes choses.",
+      "Yabnecita, ta lumière intérieure éclaire non seulement ton chemin, mais aussi celui des autres autour de toi.",
+      "Yabnecito, chaque jour est une nouvelle chance d’écrire ton histoire avec passion et courage. Saisis-la pleinement.",
+      "Yamne, la persévérance que tu montres aujourd’hui sera ton plus grand atout demain. Ne lâche rien.",
+      "Yabne, ta résilience est une source d’inspiration pour tous ceux qui te connaissent. Continue à avancer.",
+      "Yamne, même dans les moments difficiles, rappelle-toi que tu as en toi la force de surmonter tous les obstacles.",
+      "Yabnecita, ton engagement à te dépasser chaque jour crée un avenir brillant dont tu peux être fier.",
+      "Yabnecito, crois en la puissance de tes rêves et en ta capacité à les réaliser, car tu es plus fort que tu ne le penses."
+    ];
+
+    function mostrarMensaje() {
+      const cerdito = document.getElementById("cerdito");
+      const mensaje = document.getElementById("mensaje");
+      const texto = mensajes[Math.floor(Math.random() * mensajes.length)];
+      cerdito.style.display = "block";
+      mensaje.innerText = texto;
+    }
+  </script>
+</body>
+</html>
